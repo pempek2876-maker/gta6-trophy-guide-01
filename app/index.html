@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI — what to do, where, and what can be missed.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies &middot; offline</p>
+  <h1>Leonida Legend</h1>
+  <p class="subtitle">Every GTA VI trophy, explained in plain words — what to do, where to do it, and the one trophy you can miss for good.</p>
+  <section class="progress" aria-label="Your progress">
+    <div class="progress-top">
+      <span><strong id="earned-count">0</strong> / 55 earned</span>
+      <span id="earned-pct">0%</span>
+    </div>
+    <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progress-bar-wrap">
+      <div class="bar-fill" id="progress-bar"></div>
+    </div>
+    <p class="grades" id="grade-counts"></p>
+    <div class="actions">
+      <button id="export-btn" type="button">Export progress</button>
+      <label class="import-label" for="import-file">Import progress
+        <input id="import-file" type="file" accept="application/json,.json" hidden>
+      </label>
+      <button id="reset-btn" type="button">Reset</button>
+    </div>
+  </section>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="Sections">
+  <button type="button" data-view="checklist" class="active" role="tab" aria-selected="true">Checklist</button>
+  <button type="button" data-view="roadmap" role="tab" aria-selected="false">Roadmap to Platinum</button>
+  <button type="button" data-view="missable" role="tab" aria-selected="false">Missable</button>
+  <button type="button" data-view="sources" role="tab" aria-selected="false">Sources</button>
+</nav>
+
+<main>
+  <section id="view-checklist" class="view" aria-label="Trophy checklist">
+    <div class="controls">
+      <input id="q" type="search" placeholder="Search trophies…" aria-label="Search trophies">
+      <select id="grade-filter" aria-label="Filter by grade">
+        <option value="">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+      <select id="kind-filter" aria-label="Filter by kind">
+        <option value="">All kinds</option>
+      </select>
+      <select id="earned-filter" aria-label="Filter by earned state">
+        <option value="all">All trophies</option>
+        <option value="unearned">Unearned only</option>
+        <option value="earned">Earned only</option>
+      </select>
+      <label class="check"><input id="missable-only" type="checkbox"> Missable only</label>
+      <label class="check"><input id="spoiler-toggle" type="checkbox" checked> Hide story spoilers</label>
+    </div>
+    <p class="count-line" id="count-line"></p>
+    <div class="layout">
+      <div class="list" id="trophy-list"></div>
+      <aside class="detail" id="detail-panel" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden aria-label="Roadmap to Platinum">
+    <div id="roadmap-root"></div>
+  </section>
+
+  <section id="view-missable" class="view" hidden aria-label="Missable trophy warning">
+    <div class="warning">
+      <h2>One trophy can be missed for good</h2>
+      <p>There is <strong>no mission replay</strong> and <strong>no New Game Plus</strong> in GTA VI. If you pass a missable moment, the only way back is a second full playthrough — or a manual save made in time.</p>
+    </div>
+    <div id="missable-root"></div>
+    <h3>Save discipline — four habits</h3>
+    <ol class="save-list">
+      <li>Make a <strong>manual save at the start of every chapter</strong>, before playing a single mission.</li>
+      <li>Meditate at <strong>Lucia&rsquo;s balcony before Chapter 1 ends</strong> — that spot is gone once the chapter closes.</li>
+      <li>Keep a <strong>manual save from just before the final mission</strong>.</li>
+      <li>Never overwrite your chapter-start save with an autosave-only slot.</li>
+    </ol>
+  </section>
+
+  <section id="view-sources" class="view" hidden aria-label="Sources">
+    <h2>Where the facts come from</h2>
+    <p>Guides in this app are original writing. Trophy names, descriptions, and grades are the official list, cross-checked against two trophy sites.</p>
+    <div id="sources-root"></div>
+    <h3>What &ldquo;unconfirmed&rdquo; means</h3>
+    <p>Seven trophies have no reported unlock method yet. For those, the guide gives only the best reading of the official description and says so plainly — it never invents a method. When a method is confirmed, the guide will be updated.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Legend — an unofficial fan-made guide. Not affiliated with Rockstar Games or Sony. Trophy names, descriptions, and grades are the official PlayStation list. Works fully offline; your progress stays in your browser.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
